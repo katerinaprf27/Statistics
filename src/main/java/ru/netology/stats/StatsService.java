@@ -39,8 +39,8 @@ public class StatsService {
         return numberOfMonthMinSales;
     }
 
-    public int MonthsAmountWithSalesLowerAverage(long[] salesByMonths) {
-        int monthsAmount = 0;
+    public long monthsAmountWithSalesLowerAverage(long[] salesByMonths) {
+        long monthsAmount = 0;
         long sum =0;
         for (long purchase : salesByMonths) {
             sum += purchase;
@@ -53,8 +53,8 @@ public class StatsService {
         return monthsAmount;
 
     }
-    public int MonthsAmountWithSalesHigherAverage(long[] salesByMonths) {
-        int monthsAmount = 0;
+    public long monthsAmountWithSalesHigherAverage(long[] salesByMonths) {
+        long monthsAmount = 0;
         long sum =0;
         for (long purchase : salesByMonths) {
             sum += purchase;

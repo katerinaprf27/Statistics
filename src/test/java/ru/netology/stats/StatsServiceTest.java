@@ -41,18 +41,18 @@ class StatsServiceTest {
     }
 
     @Test
-    void MonthsAmountWithSalesLowerAverage() {
+    void monthsAmountWithSalesLowerAverage() {
         StatsService service = new StatsService();
         long expected = 5;
-        long actual = service.MonthsAmountWithSalesLowerAverage(salesByMonths);
+        long actual = service.monthsAmountWithSalesLowerAverage(salesByMonths);
         assertEquals(expected, actual);
     }
 
     @Test
-    void MonthsAmountWithSalesHigherAverage() {
+    void monthsAmountWithSalesHigherAverage() {
         StatsService service = new StatsService();
         long expected = 5;
-        long actual = service.MonthsAmountWithSalesHigherAverage(salesByMonths);
+        long actual = service.monthsAmountWithSalesHigherAverage(salesByMonths);
         assertEquals(expected, actual);
     }
 }
