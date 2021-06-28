@@ -41,8 +41,10 @@ public class StatsService {
 
     public long monthsAmountWithSalesLowerAverage(long[] salesByMonths) {
         long monthsAmount = 0;
+        long averageSalesAmountPerMonth = averageSalesAmountPerMonth(salesByMonths);
+        long numberOfMonthSalesMin = 0;
         for (long purchase : salesByMonths) {
-            if (purchase < averageSalesAmountPerMonth(salesByMonths)) {
+            if (purchase < averageSalesAmountPerMonth) {
                 monthsAmount += 1;
             }
         }
@@ -51,8 +53,10 @@ public class StatsService {
     }
     public long monthsAmountWithSalesHigherAverage(long[] salesByMonths) {
         long monthsAmount = 0;
+        long averageSalesAmountPerMonth = averageSalesAmountPerMonth(salesByMonths);
+        long numberOfMonthSalesMax = 0;
         for (long purchase : salesByMonths) {
-            if (purchase > averageSalesAmountPerMonth(salesByMonths)) {
+            if (purchase > averageSalesAmountPerMonth) {
                 monthsAmount += 1;
             }
         }
